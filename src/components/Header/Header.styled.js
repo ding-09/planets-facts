@@ -8,12 +8,14 @@ export const StyledHeader = styled.header`
     align-items: center;
     border-bottom: 1px solid ${({ theme }) => theme.secondaryColors.darkGray};
     box-shadow: 0 0px 1px 1px ${({ theme }) => theme.secondaryColors.darkGray};
-      h1 {
+    h1 {
       letter-spacing: -0.1rem;
       text-transform: uppercase;
       font-size: 2.8rem;
     }
+
   }
+
 
   .nav-container {
     margin: 2.5rem 2.4rem 6.5rem;
