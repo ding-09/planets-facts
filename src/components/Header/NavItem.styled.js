@@ -1,7 +1,8 @@
-import styled, { ThemeProvider } from 'styled-components';
+import styled from 'styled-components';
+import ChevronIcon from '../../assets/icon-chevron.svg';
 
 export const StyledNavItem = styled.li`
-  padding: 2rem 3rem;
+  padding: 2rem 0 2rem 4rem;
   list-style-type: none;
   text-transform: uppercase;
   font-size: 1.5rem;
@@ -22,5 +23,11 @@ export const StyledNavItem = styled.li`
     background-color: ${(props) => props.theme.planetColors[props.color]};
     position: absolute;
     left: 0;
+  }
+
+  &:after {
+    content: url(${ChevronIcon});
+    position: absolute;
+    right: 0;
   }
 `;

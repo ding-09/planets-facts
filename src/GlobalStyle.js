@@ -23,6 +23,11 @@ const GlobalStyles = createGlobalStyle`
     h1, h2 {
         font-family: 'Antonio', sans-serif
     }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
 `;
 
 export default GlobalStyles;

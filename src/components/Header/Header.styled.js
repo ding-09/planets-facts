@@ -7,8 +7,8 @@ export const StyledHeader = styled.header`
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid ${({ theme }) => theme.secondaryColors.darkGray};
-
-    h1 {
+    box-shadow: 0 0px 1px 1px ${({ theme }) => theme.secondaryColors.darkGray};
+      h1 {
       letter-spacing: -0.1rem;
       text-transform: uppercase;
       font-size: 2.8rem;
