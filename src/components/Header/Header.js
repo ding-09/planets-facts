@@ -1,9 +1,8 @@
 import { StyledHeader } from './Header.styled';
 import { ReactComponent as HamburgerIcon } from '../../assets/icon-hamburger.svg';
 import { useState, useEffect } from 'react';
-import {v4 as uuidv4} from 'uuid'
+import { v4 as uuidv4 } from 'uuid';
 import NavItem from './NavItem';
-
 
 const Header = ({ planets }) => {
   // state for menu
@@ -34,7 +33,7 @@ const Header = ({ planets }) => {
           <nav>
             <ul>
               {planets.map((planet) => (
-                <NavItem planet={planet} key={uuidv4()}/>
+                <NavItem planet={planet} key={uuidv4()} />
               ))}
             </ul>
           </nav>

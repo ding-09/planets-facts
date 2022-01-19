@@ -13,9 +13,7 @@ export const StyledHeader = styled.header`
       text-transform: uppercase;
       font-size: 2.8rem;
     }
-
   }
-
 
   .nav-container {
     margin: 2.5rem 2.4rem 6.5rem;
