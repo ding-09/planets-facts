@@ -5,9 +5,9 @@ import GlobalStyles from './GlobalStyle';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import planetsData from './data.json';
 import Header from './components/Header/Header';
+import Planet from './components/PlanetDetails/Planet';
 
 function App() {
-
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
@@ -16,6 +16,7 @@ function App() {
           <Header planets={planetsData} />
         </main>
         <Routes>
+          <Route path='/:planet' element={<Planet />} />
         </Routes>
       </Router>
     </ThemeProvider>

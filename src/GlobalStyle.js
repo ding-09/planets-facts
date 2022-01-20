@@ -13,7 +13,8 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body {
-        background: ${({ theme }) => theme.primaryColors.bg} url(${bgImg}) no-repeat;
+        background: ${({ theme }) =>
+          theme.primaryColors.bg} url(${bgImg}) no-repeat;
         color: ${({ theme }) => theme.primaryColors.text};
         font-family: 'Spartan', sans-serif;
         font-size: 1.4rem;
@@ -24,6 +25,10 @@ const GlobalStyles = createGlobalStyle`
         font-family: 'Antonio', sans-serif
     }
 
+    li {
+        list-style-type: none;
+    }
+    
     a {
         text-decoration: none;
         color: inherit;

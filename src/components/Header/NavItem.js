@@ -1,10 +1,12 @@
 import { StyledNavItem } from './NavItem.styled';
 import { Link } from 'react-router-dom';
 
-const NavItem = ({ planet }) => {
+const NavItem = ({ planet, setShowMenu }) => {
   return (
     <StyledNavItem color={planet.name.toLowerCase()}>
-      <Link to={planet.name.toLowerCase()}>{planet.name}</Link>
+      <Link to={planet.name.toLowerCase()} onClick={() => setShowMenu(false)}>
+        {planet.name}
+      </Link>
     </StyledNavItem>
   );
 };

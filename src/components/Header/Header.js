@@ -11,6 +11,7 @@ const Header = ({ planets }) => {
   const toggleMenu = () => {
     // display menu (set showMenu to true)
     setShowMenu(!showMenu);
+
   };
 
   // useEffect(() => {
@@ -33,7 +34,7 @@ const Header = ({ planets }) => {
           <nav>
             <ul>
               {planets.map((planet) => (
-                <NavItem planet={planet} key={uuidv4()} />
+                <NavItem planet={planet} key={uuidv4()} setShowMenu={setShowMenu}/>
               ))}
             </ul>
           </nav>
