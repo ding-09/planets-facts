@@ -10,7 +10,7 @@ const DetailsBody = ({ currentPlanet, details }) => {
         <p>{overview.content}</p>
       </div>
       <p className='source'>
-        Source: <a href={overview.source}>Wikipedia</a>
+        Source : <a href={overview.source}>Wikipedia </a>
       </p>
     </StyledDetailsBody>
   );

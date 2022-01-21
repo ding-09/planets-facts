@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ReactComponent as SourceIcon } from '../../icons/icon-source.svg';
+import SourceIcon from '../../icons/icon-source.svg';
 
 export const StyledDetailsBody = styled.section`
   display: flex;
@@ -22,5 +22,18 @@ export const StyledDetailsBody = styled.section`
   .source {
     font-size: 1.2rem;
     filter: brightness(0.6);
+    a {
+      position: relative;
+      text-decoration: underline;
+      font-weight: bold;
+      &:after {
+        content: url(${SourceIcon});
+        position: absolute;
+        color: #fff;
+        top: 0;
+        bottom: 0;
+        transform: translate(50%, -30%);
+      }
+    }
   }
 `;
