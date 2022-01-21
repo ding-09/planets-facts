@@ -1,4 +1,4 @@
-import  DetailsNav  from '../DetailsNav/DetailsNav';
+import  DetailsNav  from '../Details/DetailsNav';
 
 const Planet = () => {
   return <DetailsNav />;
