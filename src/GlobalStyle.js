@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components';
-import bgImg from './assets/background-stars.svg';
 
 const GlobalStyles = createGlobalStyle`
     *, *::before, *::after {
@@ -14,7 +13,7 @@ const GlobalStyles = createGlobalStyle`
 
     body {
         background: ${({ theme }) =>
-          theme.primaryColors.bg} url(${bgImg}) no-repeat;
+          theme.primaryColors.bg} url('/assets/background-stars.svg') no-repeat;
         color: ${({ theme }) => theme.primaryColors.text};
         font-family: 'Spartan', sans-serif;
         font-size: 1.4rem;

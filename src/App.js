@@ -16,7 +16,7 @@ function App() {
           <Header planets={planetsData} />
         </main>
         <Routes>
-          <Route path='/:planet' element={<PlanetDetails />} />
+          <Route path='/:planet' element={<PlanetDetails planetsData={planetsData}/>} />
         </Routes>
       </Router>
     </ThemeProvider>

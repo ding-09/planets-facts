@@ -1,5 +1,5 @@
 import { StyledHeader } from './Header.styled';
-import { ReactComponent as HamburgerIcon } from '../../assets/icon-hamburger.svg';
+import { ReactComponent as HamburgerIcon } from '../../icons/icon-hamburger.svg';
 import { useState, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import NavItem from './NavItem';

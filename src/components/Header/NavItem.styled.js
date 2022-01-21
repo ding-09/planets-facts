@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import ChevronIcon from '../../assets/icon-chevron.svg';
+import ChevronIcon from '../../icons/icon-chevron.svg';
 
 export const StyledNavItem = styled.li`
   display: flex;

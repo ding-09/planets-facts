@@ -1,10 +1,10 @@
+import { StyledDetailsImg } from './DetailsImg.styled';
+const DetailsImg = ({ images }) => {
+  return (
+    <StyledDetailsImg>
+      <img src={images.planet} alt='Mercury' />
+    </StyledDetailsImg>
+  );
+};
 
-const DetailsImg = () => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
-
-export default DetailsImg
+export default DetailsImg;
