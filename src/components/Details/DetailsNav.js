@@ -1,19 +1,36 @@
 import { StyledDetailsNav } from './DetailsNav.styled';
+import { NavLink, useLocation } from 'react-router-dom';
 
-const DetailsNav = () => {
+const DetailsNav = ({ setCurrentDetails }) => {
   return (
     <StyledDetailsNav>
       <ul>
         <li>
-          <a href='#' className='active-link'>
+          <NavLink
+            to='overview'
+            className={({ isActive }) => (isActive ? 'active-link' : '')}
+            onClick={() => setCurrentDetails('overview')}
+          >
             Overview
-          </a>
+          </NavLink>
         </li>
         <li>
-          <a href='#'>Structure</a>
+          <NavLink
+            to='structure'
+            onClick={() => setCurrentDetails('structure')}
+            className={({ isActive }) => (isActive ? 'active-link' : '')}
+          >
+            Structure
+          </NavLink>
         </li>
         <li>
-          <a href='#'>Surface</a>
+          <NavLink
+            to='surface'
+            onClick={() => setCurrentDetails('surface')}
+            className={({ isActive }) => (isActive ? 'active-link' : '')}
+          >
+            Surface
+          </NavLink>
         </li>
       </ul>
     </StyledDetailsNav>

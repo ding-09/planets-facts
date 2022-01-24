@@ -2,7 +2,7 @@ import { StyledDetailsImg } from './DetailsImg.styled';
 const DetailsImg = ({ images }) => {
   return (
     <StyledDetailsImg>
-      <img src={images.planet} alt='Mercury' />
+      <img src={images.planet} alt='' />
     </StyledDetailsImg>
   );
 };
