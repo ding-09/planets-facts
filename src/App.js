@@ -8,24 +8,19 @@ import Header from './components/Header/Header';
 import PlanetDetails from './components/Details/PlanetDetails';
 
 function App() {
+  const [currentPlanet, setCurrentPlanet] = useState('mercury');
+
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Router>
         <main>
-          <Header planets={planetsData} />
+          <Header planets={planetsData} setCurrentPlanet={setCurrentPlanet} />
+          <PlanetDetails
+            planetsData={planetsData}
+            currentPlanet={currentPlanet}
+          />
         </main>
-        <Routes>
-          <Route
-            path='/:planet'
-            element={<PlanetDetails planetsData={planetsData} />}
-          >
-            <Route
-              path=':details'
-              element={<PlanetDetails planetsData={planetsData} />}
-            />
-          </Route>
-        </Routes>
       </Router>
     </ThemeProvider>
   );

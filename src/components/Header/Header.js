@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import NavItem from './NavItem';
 
-const Header = ({ planets }) => {
+const Header = ({ planets, setCurrentPlanet }) => {
   // state for menu
   const [showMenu, setShowMenu] = useState(false);
 
@@ -34,7 +34,7 @@ const Header = ({ planets }) => {
           <nav>
             <ul>
               {planets.map((planet) => (
-                <NavItem planet={planet} key={uuidv4()} setShowMenu={setShowMenu}/>
+                <NavItem planet={planet} key={uuidv4()} setShowMenu={setShowMenu} setCurrentPlanet={setCurrentPlanet}/>
               ))}
             </ul>
           </nav>

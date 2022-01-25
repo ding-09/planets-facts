@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
 export const StyledDetailsImg = styled.figure`
-    width: 30%;
-    margin: 9.5rem auto;
+    margin: 6rem auto;
+    text-align: center;
     img {
-        max-width: 100%;
+       max-width: 55%;
     }
 `

@@ -1,5 +1,5 @@
 import { StyledDetailsNav } from './DetailsNav.styled';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const DetailsNav = ({ setCurrentDetails }) => {
   return (
@@ -7,9 +7,9 @@ const DetailsNav = ({ setCurrentDetails }) => {
       <ul>
         <li>
           <NavLink
-            to='overview'
-            className={({ isActive }) => (isActive ? 'active-link' : '')}
+            to='/'
             onClick={() => setCurrentDetails('overview')}
+            className={({ isActive }) => (isActive ? 'active-link' : '')}
           >
             Overview
           </NavLink>
