@@ -6,8 +6,7 @@ import { StyledPlanetDetails } from './PlanetDetails.styled';
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 
-const PlanetDetails = ({ planetsData, currentPlanet }) => {
-  const [currentDetails, setCurrentDetails] = useState('overview');
+const PlanetDetails = ({ planetsData, currentPlanet, currentDetails, setCurrentDetails }) => {
 
   let details = {};
   let subDetails = {};

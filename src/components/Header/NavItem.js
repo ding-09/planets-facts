@@ -1,14 +1,15 @@
 import { StyledNavItem } from './NavItem.styled';
 import { Link } from 'react-router-dom';
 
-const NavItem = ({ planet, setShowMenu, setCurrentPlanet }) => {
+const NavItem = ({ planet, setShowMenu, setCurrentPlanet, setCurrentDetails }) => {
   return (
     <StyledNavItem color={planet.name.toLowerCase()}>
       <Link
-        to='#'
+        to='/'
         onClick={() => {
           setShowMenu(false);
           setCurrentPlanet(planet.name);
+          setCurrentDetails('overview')
         }}
       >
         {planet.name}
