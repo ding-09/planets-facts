@@ -1,9 +1,9 @@
 import { StyledDetailsNav } from './DetailsNav.styled';
 import { NavLink } from 'react-router-dom';
 
-const DetailsNav = ({ setCurrentDetails }) => {
+const DetailsNav = ({ setCurrentDetails, currentPlanet }) => {
   return (
-    <StyledDetailsNav>
+    <StyledDetailsNav color={currentPlanet}>
       <ul>
         <li>
           <NavLink

@@ -33,7 +33,7 @@ const PlanetDetails = ({ planetsData, currentPlanet, currentDetails, setCurrentD
 
   return (
     <StyledPlanetDetails>
-      <DetailsNav setCurrentDetails={setCurrentDetails} />
+      <DetailsNav setCurrentDetails={setCurrentDetails} currentPlanet={currentPlanet}/>
       <DetailsImg images={images} currentDetails={currentDetails} />
       <DetailsBody
         currentPlanet={currentPlanet}
