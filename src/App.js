@@ -8,6 +8,7 @@ import Header from './components/Header/Header';
 import PlanetDetails from './components/Details/PlanetDetails';
 
 function App() {
+  // default states for landing page
   const [currentPlanet, setCurrentPlanet] = useState('mercury');
   const [currentDetails, setCurrentDetails] = useState('overview');
 

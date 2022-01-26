@@ -8,16 +8,25 @@ const Header = ({ planets, setCurrentPlanet, setCurrentDetails }) => {
   // state for menu
   const [showMenu, setShowMenu] = useState(false);
 
+  // toggle menu on click of hamburger icon
   const toggleMenu = () => {
     // display menu (set showMenu to true)
     setShowMenu(!showMenu);
   };
 
-  // useEffect(() => {
-  //   if (window.innerWidth > 375) {
-  //     setShowMenu(true);
-  //   }
-  // }, [showMenu])
+  // permanently display nav menu on screens >= 768px
+  const handleResize = (e) => {
+    const width = e.target.innerWidth;
+    width >= 768 ? setShowMenu(true) : setShowMenu(false);
+  };
+
+  useEffect(() => {
+    // add event listener to observe current window size
+    window.addEventListener('resize', handleResize);
+
+    // clean up
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <StyledHeader>
