@@ -44,4 +44,8 @@ export const StyledDetailsNav = styled.nav`
       background-color: ${(props) => props.theme.planetColors[props.color]};
     }
   }
+  @media (min-width: 1024px) {
+    margin-left: 4rem;
+
+  }
 `;

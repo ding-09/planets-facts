@@ -31,4 +31,17 @@ export const StyledPlanetDetails = styled.section`
       align-self: center;
     }
   }
+  @media (min-width: 1024px) {
+    padding: 0 8rem;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      'img img body body'
+      'img img body body'
+      'img img nav nav'
+      'sub sub sub sub';
+    figure {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+  }
 `;

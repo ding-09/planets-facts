@@ -11,6 +11,10 @@ export const StyledSubDetails = styled.section`
     flex-direction: row;
     justify-content: space-between;
   }
+  @media (min-width: 1024px) {
+    margin-top: 5rem;
+    
+  }
   .details-container {
     display: flex;
     justify-content: space-between;

@@ -11,6 +11,9 @@ export const StyledDetailsBody = styled.section`
     padding: 0 3rem;
   }
 
+  @media (min-width: 1024px) {
+    margin: 8rem 0 4rem 5rem;
+  }
   .body-content {
     margin-bottom: 3rem;
     h2 {
@@ -21,11 +24,18 @@ export const StyledDetailsBody = styled.section`
         font-size: 4.8rem;
         margin-bottom: 4.5rem;
       }
+      @media (min-width: 1024px) {
+        font-size: 8rem;
+        margin-bottom: 6rem;
+      }
     }
     p {
       font-size: 1.1rem;
       line-height: 2.2rem;
       filter: brightness(0.7);
+      @media (min-width: 1024px) {
+        font-size: 1.2rem;
+      }
     }
   }
   .source {

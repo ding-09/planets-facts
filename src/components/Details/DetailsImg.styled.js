@@ -8,5 +8,8 @@ export const StyledDetailsImg = styled.figure`
     @media (min-width: 768px) {
       max-width: 60%;
     }
+    @media (min-width: 1024px) {
+      max-width: 100%;
+    }
   }
 `;
