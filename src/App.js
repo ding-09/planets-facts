@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { theme } from './theme';
 import GlobalStyles from './GlobalStyle';
@@ -11,6 +11,20 @@ function App() {
   // default states for landing page
   const [currentPlanet, setCurrentPlanet] = useState('mercury');
   const [currentDetails, setCurrentDetails] = useState('overview');
+  const [currentScreen, setCurrentScreen] = useState(0);
+
+  const handleResize = (e) => {
+    const width = e.target.innerWidth;
+    setCurrentScreen(width);
+  };
+
+  useEffect(() => {
+    // add event listener to observe current window size
+    window.addEventListener('resize', handleResize);
+
+    // clean up
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <ThemeProvider theme={theme}>
@@ -19,11 +33,13 @@ function App() {
         <main>
           <Header
             planets={planetsData}
+            currentScreen={currentScreen}
             setCurrentPlanet={setCurrentPlanet}
             setCurrentDetails={setCurrentDetails}
           />
           <PlanetDetails
             planetsData={planetsData}
+            currentScreen={currentScreen}
             currentPlanet={currentPlanet}
             currentDetails={currentDetails}
             setCurrentDetails={setCurrentDetails}

@@ -6,8 +6,13 @@ import { StyledPlanetDetails } from './PlanetDetails.styled';
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 
-const PlanetDetails = ({ planetsData, currentPlanet, currentDetails, setCurrentDetails }) => {
-
+const PlanetDetails = ({
+  planetsData,
+  currentScreen,
+  currentPlanet,
+  currentDetails,
+  setCurrentDetails,
+}) => {
   let details = {};
   let subDetails = {};
   let images = {};
@@ -33,7 +38,11 @@ const PlanetDetails = ({ planetsData, currentPlanet, currentDetails, setCurrentD
 
   return (
     <StyledPlanetDetails>
-      <DetailsNav setCurrentDetails={setCurrentDetails} currentPlanet={currentPlanet}/>
+      <DetailsNav
+        currentScreen={currentScreen}
+        currentPlanet={currentPlanet}
+        setCurrentDetails={setCurrentDetails}
+      />
       <DetailsImg images={images} currentDetails={currentDetails} />
       <DetailsBody
         currentPlanet={currentPlanet}

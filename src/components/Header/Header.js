@@ -1,32 +1,19 @@
 import { StyledHeader } from './Header.styled';
 import { ReactComponent as HamburgerIcon } from '../../icons/icon-hamburger.svg';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import NavItem from './NavItem';
 
-const Header = ({ planets, setCurrentPlanet, setCurrentDetails }) => {
-  // state for menu
+const Header = ({ planets, currentScreen, setCurrentPlanet, setCurrentDetails }) => {
+  // state for menu toggle
   const [showMenu, setShowMenu] = useState(false);
 
   // toggle menu on click of hamburger icon
   const toggleMenu = () => {
-    // display menu (set showMenu to true)
+    // open / close menu (set showMenu to opposite)
     setShowMenu(!showMenu);
   };
 
-  // permanently display nav menu on screens >= 768px
-  const handleResize = (e) => {
-    const width = e.target.innerWidth;
-    width >= 768 ? setShowMenu(true) : setShowMenu(false);
-  };
-
-  useEffect(() => {
-    // add event listener to observe current window size
-    window.addEventListener('resize', handleResize);
-
-    // clean up
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
 
   return (
     <StyledHeader>
@@ -37,7 +24,8 @@ const Header = ({ planets, setCurrentPlanet, setCurrentDetails }) => {
           style={{ fill: showMenu ? '#979797' : '#fff' }}
         />
       </section>
-      {showMenu && (
+      {/* show menu if showMenu is true OR if no longer on mobile */}
+      {(showMenu || currentScreen > 768) && (
         <section className='nav-container'>
           <nav>
             <ul>
@@ -45,6 +33,7 @@ const Header = ({ planets, setCurrentPlanet, setCurrentDetails }) => {
                 <NavItem
                   planet={planet}
                   key={uuidv4()}
+                  currentScreen={currentScreen}
                   setShowMenu={setShowMenu}
                   setCurrentPlanet={setCurrentPlanet}
                   setCurrentDetails={setCurrentDetails}

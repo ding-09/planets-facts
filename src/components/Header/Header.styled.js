@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
 export const StyledHeader = styled.header`
+  @media (min-width: 768px) {
+    border-bottom: 1px solid ${({ theme }) => theme.secondaryColors.darkGray};
+    box-shadow: 0 0px 1px 1px ${({ theme }) => theme.secondaryColors.darkGray};
+  }
   .title-container {
     padding: 2rem 2.4rem;
     display: flex;
@@ -13,9 +17,25 @@ export const StyledHeader = styled.header`
       text-transform: uppercase;
       font-size: 2.8rem;
     }
+    @media (min-width: 768px) {
+      justify-content: center;
+      padding: 3.5rem 0 3rem;
+      border-bottom: none;
+      box-shadow: none;
+      svg {
+        display: none;
+      }
+    }
   }
 
   .nav-container {
     margin: 2.5rem 2.4rem 6.5rem;
+    @media (min-width: 768px) {
+      margin: 3rem 5rem 2.5rem;
+      ul {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
   }
 `;

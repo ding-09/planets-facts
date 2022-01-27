@@ -1,7 +1,9 @@
 import { StyledDetailsNav } from './DetailsNav.styled';
 import { NavLink } from 'react-router-dom';
 
-const DetailsNav = ({ setCurrentDetails, currentPlanet }) => {
+const DetailsNav = ({ currentScreen, currentPlanet, setCurrentDetails}) => {
+
+
   return (
     <StyledDetailsNav color={currentPlanet}>
       <ul>
@@ -11,7 +13,7 @@ const DetailsNav = ({ setCurrentDetails, currentPlanet }) => {
             onClick={() => setCurrentDetails('overview')}
             className={({ isActive }) => (isActive ? 'active-link' : '')}
           >
-            Overview
+            {currentScreen > 768 && <span>01</span>} Overview
           </NavLink>
         </li>
         <li>
@@ -20,7 +22,7 @@ const DetailsNav = ({ setCurrentDetails, currentPlanet }) => {
             onClick={() => setCurrentDetails('structure')}
             className={({ isActive }) => (isActive ? 'active-link' : '')}
           >
-            Structure
+            {currentScreen > 768 && <span>02</span>} Structure
           </NavLink>
         </li>
         <li>
@@ -29,7 +31,7 @@ const DetailsNav = ({ setCurrentDetails, currentPlanet }) => {
             onClick={() => setCurrentDetails('surface')}
             className={({ isActive }) => (isActive ? 'active-link' : '')}
           >
-            Surface
+            {currentScreen > 768 && <span>03</span>} Surface
           </NavLink>
         </li>
       </ul>
