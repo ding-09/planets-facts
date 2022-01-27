@@ -14,6 +14,7 @@ export const StyledDetailsBody = styled.section`
   @media (min-width: 1024px) {
     margin: 8rem 0 4rem 5rem;
   }
+
   .body-content {
     margin-bottom: 3rem;
     h2 {
@@ -24,7 +25,7 @@ export const StyledDetailsBody = styled.section`
         font-size: 4.8rem;
         margin-bottom: 4.5rem;
       }
-      @media (min-width: 1024px) {
+      @media (min-width: 1280px) {
         font-size: 8rem;
         margin-bottom: 6rem;
       }
@@ -35,6 +36,9 @@ export const StyledDetailsBody = styled.section`
       filter: brightness(0.7);
       @media (min-width: 1024px) {
         font-size: 1.2rem;
+      }
+      @media (min-width: 1280px) {
+        font-size: 1.4rem;
       }
     }
   }

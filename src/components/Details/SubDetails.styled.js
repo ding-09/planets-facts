@@ -13,7 +13,6 @@ export const StyledSubDetails = styled.section`
   }
   @media (min-width: 1024px) {
     margin-top: 5rem;
-    
   }
   .details-container {
     display: flex;
@@ -44,6 +43,9 @@ export const StyledSubDetails = styled.section`
       @media(min-width: 768px) {
         font-size: 2.4rem;
         letter-spacing: -0.1rem;
+      }
+      @media (min-width: 1280px) {
+        font-size: 4rem;
       }
     }
   }

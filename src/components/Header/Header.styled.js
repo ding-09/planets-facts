@@ -5,6 +5,12 @@ export const StyledHeader = styled.header`
     border-bottom: 1px solid ${({ theme }) => theme.secondaryColors.darkGray};
     box-shadow: 0 0px 1px 1px ${({ theme }) => theme.secondaryColors.darkGray};
   }
+  @media (min-width: 1280px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3.5rem;
+  }
   .title-container {
     padding: 2rem 2.4rem;
     display: flex;
@@ -26,6 +32,10 @@ export const StyledHeader = styled.header`
         display: none;
       }
     }
+    @media (min-width: 1280px) {
+      flex: 45%;
+      justify-content: flex-start;
+    }
   }
 
   .nav-container {
@@ -36,6 +46,10 @@ export const StyledHeader = styled.header`
         display: flex;
         justify-content: space-between;
       }
+    }
+    @media (min-width: 1280px) {
+      margin: 0;
+      flex: 55%;
     }
   }
 `;

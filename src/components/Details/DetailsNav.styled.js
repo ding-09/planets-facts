@@ -38,6 +38,9 @@ export const StyledDetailsNav = styled.nav`
         display: inline-block;
         filter: brightness(0.8);
       }
+      @media (min-width: 1280px) {
+        font-size: 1.2rem;
+      }
     }
     .active-link {
       border: none;
@@ -46,6 +49,5 @@ export const StyledDetailsNav = styled.nav`
   }
   @media (min-width: 1024px) {
     margin-left: 4rem;
-
   }
 `;
