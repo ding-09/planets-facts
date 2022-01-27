@@ -13,7 +13,7 @@ const DetailsNav = ({ currentScreen, currentPlanet, setCurrentDetails}) => {
             onClick={() => setCurrentDetails('overview')}
             className={({ isActive }) => (isActive ? 'active-link' : '')}
           >
-            {currentScreen > 768 && <span>01</span>} Overview
+            {currentScreen >= 768 && <span>01</span>} Overview
           </NavLink>
         </li>
         <li>
@@ -22,7 +22,9 @@ const DetailsNav = ({ currentScreen, currentPlanet, setCurrentDetails}) => {
             onClick={() => setCurrentDetails('structure')}
             className={({ isActive }) => (isActive ? 'active-link' : '')}
           >
-            {currentScreen > 768 && <span>02</span>} Structure
+            {currentScreen >= 768 && <span>02</span>}
+            {currentScreen >= 1024 && 'Internal '}
+            Structure
           </NavLink>
         </li>
         <li>
@@ -31,7 +33,9 @@ const DetailsNav = ({ currentScreen, currentPlanet, setCurrentDetails}) => {
             onClick={() => setCurrentDetails('surface')}
             className={({ isActive }) => (isActive ? 'active-link' : '')}
           >
-            {currentScreen > 768 && <span>03</span>} Surface
+            {currentScreen >= 768 && <span>03</span>}
+            Surface
+            {currentScreen >= 1024 && ' Geology '}
           </NavLink>
         </li>
       </ul>

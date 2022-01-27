@@ -25,7 +25,7 @@ const Header = ({ planets, currentScreen, setCurrentPlanet, setCurrentDetails })
         />
       </section>
       {/* show menu if showMenu is true OR if no longer on mobile */}
-      {(showMenu || currentScreen > 768) && (
+      {(showMenu || currentScreen >= 768) && (
         <section className='nav-container'>
           <nav>
             <ul>

@@ -40,6 +40,9 @@ export const StyledDetailsNav = styled.nav`
       }
       @media (min-width: 1280px) {
         font-size: 1.2rem;
+        &:hover {
+          background-color: ${({theme}) => theme.secondaryColors.darkGray}
+        }
       }
     }
     .active-link {
@@ -50,4 +53,5 @@ export const StyledDetailsNav = styled.nav`
   @media (min-width: 1024px) {
     margin-left: 4rem;
   }
+
 `;
