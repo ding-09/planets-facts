@@ -1,16 +1,27 @@
 import { StyledNavItem } from './NavItem.styled';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import { useState } from 'react';
 
 const NavItem = ({
   planet,
+  currentPlanet,
   currentScreen,
   setShowMenu,
   setCurrentPlanet,
   setCurrentDetails,
 }) => {
+  const [activeDisplay, setActiveDisplay] = useState(false);
   return (
     <StyledNavItem color={planet.name.toLowerCase()}>
-      <Link
+      <NavLink
+        className={({ isActive }) => {
+          if (planet.name === currentPlanet) {
+            isActive = true;
+          } else {
+            isActive = false;
+          }
+          return isActive ? 'active-link' : ''
+        }}
         to='/'
         onClick={() => {
           currentScreen < 768 ? setShowMenu(false) : setShowMenu(true);
@@ -18,8 +29,9 @@ const NavItem = ({
           setCurrentDetails('overview');
         }}
       >
+        {/* {activeDisplay && <span className='active-border'></span>} */}
         {planet.name}
-      </Link>
+      </NavLink>
     </StyledNavItem>
   );
 };

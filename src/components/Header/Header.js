@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import NavItem from './NavItem';
 
-const Header = ({ planets, currentScreen, setCurrentPlanet, setCurrentDetails }) => {
+const Header = ({ planets, currentPlanet, currentScreen, setCurrentPlanet, setCurrentDetails }) => {
   // state for menu toggle
   const [showMenu, setShowMenu] = useState(false);
 
@@ -32,6 +32,7 @@ const Header = ({ planets, currentScreen, setCurrentPlanet, setCurrentDetails })
               {planets.map((planet) => (
                 <NavItem
                   planet={planet}
+                  currentPlanet={currentPlanet}
                   key={uuidv4()}
                   currentScreen={currentScreen}
                   setShowMenu={setShowMenu}

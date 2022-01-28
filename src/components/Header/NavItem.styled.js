@@ -33,6 +33,7 @@ export const StyledNavItem = styled.li`
       left: 0;
       @media (min-width: 768px) {
         content: none;
+        background-color: none;
       }
     }
     &:after {
@@ -42,6 +43,17 @@ export const StyledNavItem = styled.li`
       @media (min-width: 768px) {
         content: none;
       }
+    }
+  }
+  
+  .active-link {
+    &:before {
+      content: '';
+      width: 100%;
+      height: 0.5rem;
+      border-radius: 1px;
+      top: -110%;
+      transform: translateY(-110%)
     }
   }
 `;

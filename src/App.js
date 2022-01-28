@@ -33,6 +33,7 @@ function App() {
         <main>
           <Header
             planets={planetsData}
+            currentPlanet={currentPlanet}
             currentScreen={currentScreen}
             setCurrentPlanet={setCurrentPlanet}
             setCurrentDetails={setCurrentDetails}
