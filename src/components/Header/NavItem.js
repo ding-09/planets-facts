@@ -1,6 +1,6 @@
 import { StyledNavItem } from './NavItem.styled';
 import { NavLink } from 'react-router-dom';
-import { useState } from 'react';
+
 
 const NavItem = ({
   planet,
@@ -10,7 +10,6 @@ const NavItem = ({
   setCurrentPlanet,
   setCurrentDetails,
 }) => {
-  const [activeDisplay, setActiveDisplay] = useState(false);
   return (
     <StyledNavItem color={planet.name.toLowerCase()}>
       <NavLink
