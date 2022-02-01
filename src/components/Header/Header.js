@@ -1,6 +1,6 @@
 import { StyledHeader } from './Header.styled';
 import { ReactComponent as HamburgerIcon } from '../../icons/icon-hamburger.svg';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import NavItem from './NavItem';
 
@@ -19,6 +19,11 @@ const Header = ({
     // open / close menu (set showMenu to opposite)
     setShowMenu(!showMenu);
   };
+
+  // useEffect hook to display menu if currentScreen >= 768
+  useEffect(() => {
+    window.innerWidth >= 768 ? setShowMenu(true) : setShowMenu(false);
+  }, []);
 
   return (
     <StyledHeader>
