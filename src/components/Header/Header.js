@@ -8,19 +8,18 @@ const Header = ({
   planets,
   currentPlanet,
   currentScreen,
+  showMenu,
+  setShowMenu,
   setCurrentPlanet,
   setCurrentDetails,
 }) => {
-  // state for menu toggle
-  const [showMenu, setShowMenu] = useState(false);
-
   // toggle menu on click of hamburger icon
   const toggleMenu = () => {
     // open / close menu (set showMenu to opposite)
     setShowMenu(!showMenu);
   };
 
-  // useEffect hook to display menu if currentScreen >= 768
+  // useEffect hook to persist menu if currentScreen >= 768
   useEffect(() => {
     window.innerWidth >= 768 ? setShowMenu(true) : setShowMenu(false);
   }, []);
