@@ -20,20 +20,19 @@ export const StyledDetailsNav = styled.nav`
     text-transform: uppercase;
     font-size: 0.9rem;
     letter-spacing: 0.2rem;
+    span {
+      padding-right: 1rem;
+      filter: brightness(0.8);
+      display: none;
+      @media (min-width: 768px) {
+        display: inline-block;
+      }
+    }
     @media (min-width: 768px) {
       cursor: pointer;
       padding: 1rem 2rem;
       border: 1px solid rgba(210, 210, 210, 0.2);
       box-shadow: 0 0 0 1px rgba(210, 210, 210, 0.1);
-      span {
-        padding-right: 1rem;
-        display: inline-block;
-        filter: brightness(0.8);
-        display: none;
-        @media (min-width: 768px) {
-          display: inline;
-        }
-      }
     }
     @media (min-width: 1280px) {
       font-size: 1.2rem;
