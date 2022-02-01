@@ -3,8 +3,6 @@ import DetailsImg from './DetailsImg';
 import DetailsBody from './DetailsBody';
 import SubDetails from './SubDetails';
 import { StyledPlanetDetails } from './PlanetDetails.styled';
-import { useParams } from 'react-router-dom';
-import { useState } from 'react';
 
 const PlanetDetails = ({
   planetsData,
@@ -14,8 +12,8 @@ const PlanetDetails = ({
   setCurrentDetails,
 }) => {
   let details = {};
-  let subDetails = {};
   let images = {};
+  let subDetails = {};
 
   // look through planet to grab data for current planet
   planetsData.forEach((planet) => {

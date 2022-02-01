@@ -19,7 +19,7 @@ export const StyledNavItem = styled.li`
     @media (min-width: 768px) {
       padding: 0;
       font-size: 1.1rem;
-      filter: brightness(0.8)
+      filter: brightness(0.8);
     }
     &:before {
       content: '';
@@ -43,16 +43,18 @@ export const StyledNavItem = styled.li`
       }
     }
   }
-  
+
   /* active top border */
   .active-link {
-    &:before {
-      content: '';
-      width: 100%;
-      height: 0.5rem;
-      border-radius: 1px;
-      top: -110%;
-      transform: translateY(-110%)
+    @media (min-width: 1280px) {
+      &:before {
+        content: '';
+        width: 100%;
+        height: 0.5rem;
+        border-radius: 1px;
+        top: -110%;
+        transform: translateY(-110%);
+      }
     }
   }
 `;

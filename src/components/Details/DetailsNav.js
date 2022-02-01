@@ -1,10 +1,9 @@
 import { StyledDetailsNav } from './DetailsNav.styled';
 import { NavLink } from 'react-router-dom';
 
-const DetailsNav = ({ currentScreen, currentPlanet, setCurrentDetails}) => {
-
-
+const DetailsNav = ({ currentScreen, currentPlanet, setCurrentDetails }) => {
   return (
+    // pass current planet's color as a prop to the styled component
     <StyledDetailsNav color={currentPlanet}>
       <ul>
         <li>
@@ -22,7 +21,7 @@ const DetailsNav = ({ currentScreen, currentPlanet, setCurrentDetails}) => {
             onClick={() => setCurrentDetails('structure')}
             className={({ isActive }) => (isActive ? 'active-link' : '')}
           >
-            {currentScreen >= 768 && <span>02</span>}
+            <span>02</span>
             {currentScreen >= 1024 && 'Internal '}
             Structure
           </NavLink>
@@ -33,7 +32,7 @@ const DetailsNav = ({ currentScreen, currentPlanet, setCurrentDetails}) => {
             onClick={() => setCurrentDetails('surface')}
             className={({ isActive }) => (isActive ? 'active-link' : '')}
           >
-            {currentScreen >= 768 && <span>03</span>}
+            <span>03</span>
             Surface
             {currentScreen >= 1024 && ' Geology '}
           </NavLink>

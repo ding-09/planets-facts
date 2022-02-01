@@ -10,11 +10,9 @@ export const StyledDetailsBody = styled.section`
     text-align: left;
     padding: 0 3rem;
   }
-
   @media (min-width: 1024px) {
     margin: 8rem 0 4rem 5rem;
   }
-
   .body-content {
     margin-bottom: 3rem;
     h2 {

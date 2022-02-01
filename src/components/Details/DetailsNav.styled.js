@@ -29,6 +29,10 @@ export const StyledDetailsNav = styled.nav`
         padding-right: 1rem;
         display: inline-block;
         filter: brightness(0.8);
+        display: none;
+        @media (min-width: 768px) {
+          display: inline;
+        }
       }
     }
     @media (min-width: 1280px) {

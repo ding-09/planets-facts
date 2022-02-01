@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledHeader = styled.header`
-  .title-container {
+  .main-title {
     padding: 2rem 2.4rem;
     display: flex;
     justify-content: space-between;
@@ -28,7 +28,7 @@ export const StyledHeader = styled.header`
     }
   }
 
-  .nav-container {
+  .main-nav {
     margin: 2.5rem 2.4rem 6.5rem;
     @media (min-width: 768px) {
       margin: 3rem 5rem 2.5rem;

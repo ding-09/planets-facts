@@ -1,7 +1,6 @@
 import { StyledNavItem } from './NavItem.styled';
 import { NavLink } from 'react-router-dom';
 
-
 const NavItem = ({
   planet,
   currentPlanet,
@@ -11,6 +10,7 @@ const NavItem = ({
   setCurrentDetails,
 }) => {
   return (
+    // pass planet's color as prop to the NavItem styled component
     <StyledNavItem color={planet.name.toLowerCase()}>
       <NavLink
         className={({ isActive }) => {
@@ -19,7 +19,7 @@ const NavItem = ({
           } else {
             isActive = false;
           }
-          return isActive ? 'active-link' : ''
+          return isActive ? 'active-link' : '';
         }}
         to='/'
         onClick={() => {
@@ -28,7 +28,6 @@ const NavItem = ({
           setCurrentDetails('overview');
         }}
       >
-        {/* {activeDisplay && <span className='active-border'></span>} */}
         {planet.name}
       </NavLink>
     </StyledNavItem>

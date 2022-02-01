@@ -4,7 +4,13 @@ import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import NavItem from './NavItem';
 
-const Header = ({ planets, currentPlanet, currentScreen, setCurrentPlanet, setCurrentDetails }) => {
+const Header = ({
+  planets,
+  currentPlanet,
+  currentScreen,
+  setCurrentPlanet,
+  setCurrentDetails,
+}) => {
   // state for menu toggle
   const [showMenu, setShowMenu] = useState(false);
 
@@ -14,10 +20,9 @@ const Header = ({ planets, currentPlanet, currentScreen, setCurrentPlanet, setCu
     setShowMenu(!showMenu);
   };
 
-
   return (
     <StyledHeader>
-      <section className='title-container'>
+      <section className='main-title'>
         <h1>The Planets</h1>
         <HamburgerIcon
           onClick={toggleMenu}
@@ -26,7 +31,7 @@ const Header = ({ planets, currentPlanet, currentScreen, setCurrentPlanet, setCu
       </section>
       {/* show menu if showMenu is true OR if no longer on mobile */}
       {(showMenu || currentScreen >= 768) && (
-        <section className='nav-container'>
+        <section className='main-nav'>
           <nav>
             <ul>
               {planets.map((planet) => (

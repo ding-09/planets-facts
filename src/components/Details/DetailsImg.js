@@ -1,8 +1,8 @@
 import { StyledDetailsImg } from './DetailsImg.styled';
-const DetailsImg = ({ images, currentDetails }) => {
+const DetailsImg = ({ images }) => {
   return (
     <StyledDetailsImg>
-      <img src={images.planet} alt='' />
+      <img src={images.planet} alt='Planet' />
     </StyledDetailsImg>
   );
 };
