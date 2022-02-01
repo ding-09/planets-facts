@@ -48,7 +48,6 @@ export const StyledDetailsBody = styled.section`
     a {
       position: relative;
       text-decoration: underline;
-      font-weight: bold;
       &:after {
         content: url(${SourceIcon});
         position: absolute;

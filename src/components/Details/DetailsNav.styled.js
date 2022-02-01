@@ -6,29 +6,21 @@ export const StyledDetailsNav = styled.nav`
     justify-content: space-between;
     border-bottom: 1px solid gray;
     padding: 0 2.4rem;
-  }
-  a {
-    display: block;
-    padding: 2rem 0 1.5rem;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    font-weight: bold;
-    letter-spacing: 0.2rem;
-  }
-  .active-link {
-    border-bottom: 3px solid ${(props) => props.theme.planetColors[props.color]};
-  }
-  @media (min-width: 768px) {
-    display: flex;
-    align-items: center;
-    ul {
+    @media (min-width: 768px) {
       flex: 1;
       border-bottom: none;
       flex-direction: column;
       gap: 2rem;
       padding-left: 4rem;
     }
-    a {
+  }
+  a {
+    display: block;
+    padding: 2rem 0 1.5rem;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.2rem;
+    @media (min-width: 768px) {
       cursor: pointer;
       padding: 1rem 2rem;
       border: 1px solid rgba(210, 210, 210, 0.2);
@@ -38,20 +30,26 @@ export const StyledDetailsNav = styled.nav`
         display: inline-block;
         filter: brightness(0.8);
       }
-      @media (min-width: 1280px) {
-        font-size: 1.2rem;
-        &:hover {
-          background-color: ${({theme}) => theme.secondaryColors.darkGray}
-        }
+    }
+    @media (min-width: 1280px) {
+      font-size: 1.2rem;
+      &:hover {
+        background-color: ${({ theme }) => theme.secondaryColors.darkGray};
       }
     }
-    .active-link {
+  }
+  .active-link {
+    border-bottom: 3px solid ${(props) => props.theme.planetColors[props.color]};
+    @media (min-width: 768px) {
       border: none;
       background-color: ${(props) => props.theme.planetColors[props.color]};
     }
   }
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
   @media (min-width: 1024px) {
     margin-left: 4rem;
   }
-
 `;

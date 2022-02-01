@@ -15,9 +15,7 @@ export const StyledNavItem = styled.li`
     position: relative;
     text-transform: uppercase;
     font-size: 1.5rem;
-    font-weight: bold;
     letter-spacing: 0.1rem;
-    line-height: 2.5rem;
     @media (min-width: 768px) {
       padding: 0;
       font-size: 1.1rem;
@@ -46,6 +44,7 @@ export const StyledNavItem = styled.li`
     }
   }
   
+  /* active top border */
   .active-link {
     &:before {
       content: '';

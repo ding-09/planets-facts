@@ -4,6 +4,7 @@ import { theme } from './theme';
 import GlobalStyles from './GlobalStyle';
 import { BrowserRouter as Router } from 'react-router-dom';
 import planetsData from './data.json';
+import { StyledMain } from './components/Main.styled'
 import Header from './components/Header/Header';
 import PlanetDetails from './components/Details/PlanetDetails';
 
@@ -13,6 +14,7 @@ function App() {
   const [currentDetails, setCurrentDetails] = useState('overview');
   const [currentScreen, setCurrentScreen] = useState(0);
 
+  // set current screen width 
   const handleResize = (e) => {
     const width = e.target.innerWidth;
     setCurrentScreen(width);
@@ -30,11 +32,11 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Router>
-        <main>
+        <StyledMain>
           <Header
             planets={planetsData}
-            currentPlanet={currentPlanet}
             currentScreen={currentScreen}
+            currentPlanet={currentPlanet}
             setCurrentPlanet={setCurrentPlanet}
             setCurrentDetails={setCurrentDetails}
           />
@@ -45,7 +47,7 @@ function App() {
             currentDetails={currentDetails}
             setCurrentDetails={setCurrentDetails}
           />
-        </main>
+        </StyledMain>
       </Router>
     </ThemeProvider>
   );

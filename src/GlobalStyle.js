@@ -29,6 +29,7 @@ const GlobalStyles = createGlobalStyle`
     }
     
     a {
+        font-weight: bold;
         text-decoration: none;
         color: inherit;
     }
