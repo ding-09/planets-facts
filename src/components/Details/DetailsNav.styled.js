@@ -45,8 +45,11 @@ export const StyledDetailsNav = styled.nav`
   .active-link {
     border-bottom: 3px solid ${(props) => props.theme.planetColors[props.color]};
     @media (min-width: 768px) {
-      border: none;
+      border: 1px solid rgba(210, 210, 210, 0);
       background-color: ${(props) => props.theme.planetColors[props.color]};
+      &:focus {
+        background-color: ${(props) => props.theme.planetColors[props.color]};
+      }
     }
   }
   @media (min-width: 768px) {
